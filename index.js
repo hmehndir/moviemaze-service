@@ -9,7 +9,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://moviemaze-ui.vercel.app", // your frontend domain
+    origin: "https://moviemaze-ui.vercel.app",
   })
 );
 app.use(express.json());
