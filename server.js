@@ -7,10 +7,13 @@ const mongoose = require("mongoose");
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://moviemaze-ui.vercel.app", // your frontend domain
+  })
+);
 app.use(express.json());
 
-console.log("Mongo URI:", process.env.MONGODB_URI);
 
 mongoose
   .connect(process.env.MONGODB_URI, {
